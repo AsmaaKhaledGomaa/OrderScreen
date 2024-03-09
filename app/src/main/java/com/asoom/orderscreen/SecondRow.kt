@@ -33,8 +33,6 @@ fun SecondRow() {
             .padding(16.dp)
     ) {
 
-        // Dashed line connecting steps
-      // Spacer(modifier = Modifier.height(8.dp))
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -45,7 +43,6 @@ fun SecondRow() {
         }
 
         // Step icons
-       // Spacer(modifier = Modifier.height(8.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
@@ -61,7 +58,7 @@ fun SecondRow() {
                 ) {
                     Image(
                         painter = painterResource(id = step),
-                        contentDescription = null // Provide a meaningful description
+                        contentDescription = null
                     )
                 }
             }
@@ -79,6 +76,7 @@ fun DashedProgressBar(progress: Float) {
             color = Color.LightGray,
             start = Offset(x = 0f, y = size.height / 2),
             end = Offset(x = size.width, y = size.height / 2),
+            pathEffect = pathEffect,
             strokeWidth = 10f
         )
 
